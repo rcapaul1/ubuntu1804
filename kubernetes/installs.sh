@@ -17,3 +17,7 @@ gscloud make-config
 # edit config
 vi .config/gscloud/config.yaml
 
+apt install bash-completion -y
+source /usr/share/bash-completion/bash_completion
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+kubectl completion bash >/etc/bash_completion.d/kubectl
